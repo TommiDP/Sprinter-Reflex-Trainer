@@ -1,0 +1,69 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    background-color: #121212;
+    color: #ffffff;
+    overflow: hidden; 
+    touch-action: manipulation;
+}
+
+#touch-area {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.1s;
+    touch-action: manipulation;
+}
+
+.content {
+    pointer-events: none; 
+    z-index: 10;
+}
+
+#status-text {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+#sub-text {
+    font-size: 1.2rem;
+    color: #aaaaaa;
+    margin-bottom: 30px;
+    padding: 0 20px;
+}
+
+#start-btn {
+    pointer-events: auto; 
+    padding: 20px 50px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    background-color: #e63946;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+    transition: transform 0.05s, background-color 0.2s;
+}
+
+#start-btn:active {
+    transform: scale(0.92);
+}
+
+/* State colors */
+.bg-false { background-color: #8b0000 !important; }
